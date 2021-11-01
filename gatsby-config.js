@@ -1,10 +1,24 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `rasben`,
+    author: {
+      name: `Benjamin Rasmussen`,
+      summary: `Lives and works in Copenhagen, building web things.`,
+    },
+    description: ``,
+    siteUrl: `https://rasben.gatsbyjs.io/`,
+    social: {
+      twitter: `rasben_`,
+    },
+  },
+  plugins: [
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `rasben.net`,
+      },
+    },
+  ],
 }
